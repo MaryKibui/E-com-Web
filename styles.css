@@ -204,7 +204,7 @@ border: 1px solid #009688;
 #services{
     width: 100%;
     padding: 70px 0;
-    background: efefef;
+    background: #efefef;
 }
 .service-box{
     width: 80%;
@@ -221,6 +221,91 @@ border: 1px solid #009688;
     color: white;
 }
 .Arabian-perfumes img{
-    width: 100%;
+    width: 50%;
     border-radius: 7px;
+}
+.overlay{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    background: linear-gradient(rgba(0,0,0,0.5),#009688);
+    opacity: 0;
+    transition: 1s;
+}
+.Arabian-perfumes:hover .overlay{
+    opacity: 1;
+}
+.perfume desc{
+    width: 80%;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+hr{
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+.perfume desc p{
+    font-size: 14px;
+}
+.Arabian-perfumes:hover .perfume desc{
+    bottom: 40%;
+    opacity: 1;
+}
+@media screen and (max-width :770px){
+    .Arabian-perfumes{
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    .perfume desc p{
+        font-size: 12px;
+    }
+    hr{
+        margin: 5px auto;
+    }
+    .Arabian-perfumes:hover .perfume desc{
+    bottom: 25% !important;
+    }
+}
+/*---testimonial----*/
+#testimonials{
+    width: 100%;
+    padding: 70px 0;
+}
+.testimonial-row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.testimonial-col{
+    flex-basis: 28%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px #00968814;
+    cursor: pointer;
+}
+.testimonial-col p{
+    font-size: 14px;
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.user img{
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 3px;
 }
